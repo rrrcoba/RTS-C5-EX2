@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let show of shows">
+      <div class="card" style="width: 15rem">
+        <img src="https://image.tmdb.org/t/p/original{{show.backdrop_path}}" class="card-img-top">
+        <div class="card-body">
+          <h6 class="card-title">{{show.name}}</h6>
+          <a routerLink="/show-info/{{show.id}}" class="btn btn-info">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

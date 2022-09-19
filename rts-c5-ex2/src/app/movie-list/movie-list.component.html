@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let movie of movies">
+      <div class="card" style="width: 15rem">
+        <img src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" class="card-img-top">
+        <div class="card-body">
+          <h6 class="card-title">{{movie.title}}</h6>
+          <a routerLink="/movie-info/{{movie.id}}" class="btn btn-info">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

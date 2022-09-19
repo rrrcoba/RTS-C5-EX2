@@ -1,0 +1,22 @@
+<div class="container" *ngIf="data != null; else waiting">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="https://image.tmdb.org/t/p/original{{data.backdrop_path}}" class="card-img-top" alt="Character face image" />
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title">{{ data.name }}</h2>
+        <hr>
+        <p class="card-text"><strong>Original name: </strong> {{ data.original_name }}</p>
+        <p class="card-text"><strong>First aired: </strong> {{ data.first_air_date }}</p>
+        <p class="card-text"><strong>Episodes: </strong> {{ data.number_of_episodes }}</p>
+        <p class="card-text"><strong>Seasons: </strong> {{ data.number_of_seasons }}</p>
+        <p class="card-text"><strong>Status: </strong> {{ data.status }}</p>
+        <p class="card-text"><strong>Overview: </strong> {{ data.overview }}</p>
+        <p class="card-text"><strong>Votes: </strong> {{ data.vote_count }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #waiting>Loading...</ng-template>
